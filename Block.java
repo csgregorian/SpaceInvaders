@@ -7,6 +7,8 @@ import java.io.*;
 import javax.imageio.*;
 
 class Block extends Rectangle {
+    // Makes up the bunkers and deteriorates on hit
+
     private static Image image[] = new Image[4];
 
     static {

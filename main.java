@@ -334,6 +334,13 @@ class GamePanel extends JPanel implements KeyListener {
 
         // Enemies
         for (Enemy enemy : enemies) {
+            // Hits player
+            if (enemy.intersects(ship)) {
+                // Auto lose on contact
+                game_state = State.LOSE;
+            }
+
+            // Gets shot
             if (pBullet != null && enemy.intersects(pBullet)) {
                 enemy.alive = false;
                 pBullet = null;
@@ -365,6 +372,7 @@ class GamePanel extends JPanel implements KeyListener {
                 }
             }
 
+            // Hits edge of screen
             if (enemy.x > 960 || enemy.x < 64) {
                 switch_direction = true;
             }
@@ -433,6 +441,8 @@ class GamePanel extends JPanel implements KeyListener {
 
         // UFO
         if (alien != null) {
+            // Why did the alien cross the screen?
+            // To get to the space bar!
             alien.move();
             if (alien.x < -20 || alien.x > 1024) {
                 // Despawn alien

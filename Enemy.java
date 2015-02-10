@@ -7,6 +7,8 @@ import java.io.*;
 import javax.imageio.*;
 
 class Enemy extends Rectangle {
+    // The classic aliens that move slowly towards you
+
     public boolean alive;
     public int type;
 
@@ -14,6 +16,7 @@ class Enemy extends Rectangle {
     static {
         for (int x = 0; x < 3; x++) {
             for (int y = 0; y < 2; y++) {
+                // 2D list building of animation frames
                 String filename = String.format("resources/%d-%d.png", x, y);
                 image[x][y] = new ImageIcon(filename).getImage();
             }
@@ -59,5 +62,4 @@ class Enemy extends Rectangle {
     public Image getImage(int frame) {
         return image[type][frame];
     }
-
 }

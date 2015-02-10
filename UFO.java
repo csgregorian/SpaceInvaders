@@ -7,6 +7,8 @@ import java.io.*;
 import javax.imageio.*;
 
 class UFO extends Rectangle {
+    // A small, randomly spawned enemy that flys across your screen
+
     private static Image image = new ImageIcon("resources/ufo.png").getImage();
 
     public boolean direction;

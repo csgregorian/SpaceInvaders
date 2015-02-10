@@ -7,9 +7,11 @@ import java.io.*;
 import javax.imageio.*;
 
 class Ship extends Rectangle {
+    // Player-controlled spaceship
+
     public int speed;
     private Image image = new ImageIcon("resources/ship.png").getImage();
-    
+
     public Ship(int x, int y) {
         this.x = x;
         this.y = y;

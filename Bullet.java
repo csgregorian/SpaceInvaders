@@ -7,6 +7,8 @@ import java.io.*;
 import javax.imageio.*;
 
 class Bullet extends Rectangle {
+    // Bullets for both the player and the enemies
+
     public static Image pImage = new ImageIcon("resources/pBullet.png").getImage();
     public static Image eImage = new ImageIcon("resources/eBullet.png").getImage();
 
